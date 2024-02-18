@@ -1,6 +1,8 @@
 Red[]
 
-print "This programs adds one integer to other"
+block:[
+    do [
+print "This programs divides one integer to other"
 
 number1_str: ask "Give me the 1st number: "
 number1: to-integer number1_str
@@ -8,8 +10,16 @@ number1: to-integer number1_str
 number2_str: ask "Give me the 2st number: "
 number2: to-integer number2_str
 
-addition: number1 + number2
+division: number1 / number2
 
-print addition
+print division
+    ]
+]
 
-error! "ERRORRR"
+
+attempt [
+do block
+]
+catch[
+    print "No se puede la division entre 0"
+]
